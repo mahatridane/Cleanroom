@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -102,7 +101,7 @@
 .cleanroom-mark{position:relative;display:inline-block;flex:none;width:37px;height:40px;border:2px solid #b39ac5;border-radius:13px 13px 6px 6px;background:linear-gradient(90deg,#d9c5e8 0 48%,#b196c3 49% 52%,#f0d5dd 53%);box-shadow:2px 3px 0 #d2c0db}
 .cleanroom-mark:before{content:'';position:absolute;top:7px;left:5px;right:5px;height:13px;border:2px solid #fff8;border-radius:5px;background:#e4e4ec80}
 #introDialog .intro-scene{margin-top:20px}
-/* Approved Silicon Showdown chip mark, also used on the score screen. */
+/* Approved Fab Face-Off chip mark, also used on the score screen. */
 .chip{width:39px;height:39px;border:0;border-radius:5px;background:repeating-linear-gradient(90deg,transparent 0 4px,#bca3ce 4px 7px,transparent 7px 10px);box-shadow:none;transform:rotate(-7deg)}
 .chip:before{content:'';position:absolute;inset:4px -2px;width:auto;height:auto;border:0;border-radius:0;background:repeating-linear-gradient(0deg,transparent 0 4px,#bca3ce 4px 7px,transparent 7px 10px);box-shadow:none}
 .chip:after{content:'';position:absolute;inset:4px;width:auto;height:auto;border:6px solid #b39aca;background:linear-gradient(135deg,#efe3f6,#d0b9e4);border-radius:6px;box-shadow:0 0 0 1px #9879b2,2px 3px 0 #ccb5de}
@@ -194,7 +193,7 @@ body{position:relative;isolation:isolate;background:#f7f1ef}
 @media(max-width:420px){.yield-fraction-body{gap:8px}.yield-fraction-stack{width:173px;font-size:12px}.yield-fraction-row{gap:6px}.yield-fraction-row strong{font-size:22px;min-width:36px}.yield-observed{font-size:29px}.yield-equals{font-size:23px}.cleanroom-window.left{left:-146px}.cleanroom-window.right{right:-146px}}
 @media(prefers-reduced-motion:reduce){.yield-fraction *,#showdownResults *,#showdownResults *:before,#showdownResults *:after{animation-duration:.01ms!important;animation-delay:0ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
-/* Selected Control Room background for Silicon Showdown. */
+/* Selected Control Room background for Fab Face-Off. */
 #controlRoomBackdrop{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;background:repeating-linear-gradient(90deg,transparent 0 214px,#d2bedc 215px 216px,transparent 217px),#e9dfed}
 #controlRoomBackdrop .control-window{position:absolute;left:35px;right:35px;top:42px;bottom:159px;border:12px solid #f6ecf4;outline:1px solid #c6afd3;border-radius:90px 90px 27px 27px;background:linear-gradient(130deg,#e7dfed,#cbd9dc 46%,#e6d0e6);box-shadow:inset 0 0 0 2px #d2bddc}
 #controlRoomBackdrop .control-window:after{content:'';position:absolute;inset:0;background:linear-gradient(122deg,transparent 0 31%,#fff5 32% 35%,transparent 36% 64%,#fff4 65% 67%,transparent 68%);border-radius:78px 78px 18px 18px}
@@ -256,7 +255,7 @@ html{scroll-behavior:smooth}.primary{background:#7650ad;box-shadow:0 4px 0 #5636
 <div class="wrap">
 <header class="topbar">
 <a class="brand" href="#explore" id="home"><span class="cleanroom-mark" aria-hidden="true"></span>The Cleanroom</a>
-<nav class="mode-switch" aria-label="Choose an activity"><button type="button" id="exploreTab" aria-pressed="true" aria-controls="explore">Explore</button><button type="button" id="gameTab" aria-pressed="false" aria-controls="game">Silicon Showdown</button></nav>
+<nav class="mode-switch" aria-label="Choose an activity"><button type="button" id="exploreTab" aria-pressed="true" aria-controls="explore">Explore</button><button type="button" id="gameTab" aria-pressed="false" aria-controls="game">Fab Face-Off</button></nav>
 <div class="tools"><button type="button" id="fullscreen" class="quiet" aria-label="Enter fullscreen"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8V3h5m4 0h5v5m0 4v5h-5m-4 0H3v-5"/></svg><span id="fullscreenLabel">Fullscreen</span></button></div>
 </header>
 <noscript><p class="noscript">Enable JavaScript for the controls and game. With random, independent killer defects, expected die yield is Y = e<sup>−DA</sup>, where D is defects/cm² and A is die area in cm². Expected usable chips = complete dies × Y.</p></noscript>
@@ -320,8 +319,8 @@ html{scroll-behavior:smooth}.primary{background:#7650ad;box-shadow:0 4px 0 #5636
 <details><summary>Is die yield the same as wafer yield?</summary><p>Here, <strong>die yield</strong> means the fraction of complete dies that work. <strong>Wafer yield</strong> often means the fraction of wafers that successfully finish a process. This lab models die yield, not the loss of entire wafers.</p></details>
 </div></section><button type="button" class="game-link" id="openShowdown"><span>Take the challenge<small>Test your wafer knowledge.</small></span><span aria-hidden="true">Play together →</span></button>
 </section>
-<section id="game" aria-label="Silicon Showdown classroom game" hidden>
-<div class="studio" id="studio"><header class="studio-top"><h1 class="wordmark"><span class="chip" aria-hidden="true"></span>Silicon Showdown</h1><div class="scorebox"><span>CLASS SCORE</span><strong><span id="classScore">0</span> <small id="scoreMaximum">/ 4</small></strong></div></header>
+<section id="game" aria-label="Fab Face-Off classroom game" hidden>
+<div class="studio" id="studio"><header class="studio-top"><h1 class="wordmark"><span class="chip" aria-hidden="true"></span>Fab Face-Off</h1><div class="scorebox"><span>CLASS SCORE</span><strong><span id="classScore">0</span> <small id="scoreMaximum">/ 4</small></strong></div></header>
 <div id="roundScreen">
 <div class="question"><div class="round-badge" id="roundBadge"></div><h2 id="questionText" tabindex="-1"></h2><p id="questionHint"></p><p class="common-settings" id="commonSettings"></p></div>
 <div class="arena" id="questionArena">
@@ -332,7 +331,7 @@ html{scroll-behavior:smooth}.primary{background:#7650ad;box-shadow:0 4px 0 #5636
 <div class="voting"><p class="vote-label" id="voteLabel">Vote together, then choose the class answer.</p><div class="votes" role="group" aria-label="Record the class vote"><button class="vote" type="button" id="voteA" data-answer="A" aria-pressed="false"><kbd>1</kbd><span id="answerTextA">Wafer A</span></button><button class="vote" type="button" id="voteB" data-answer="B" aria-pressed="false"><kbd>2</kbd><span id="answerTextB">Wafer B</span></button><button class="vote" type="button" id="voteSame" data-answer="same" aria-pressed="false"><kbd>3</kbd><span id="sameLabel">Same yield</span></button></div></div>
 <div class="game-bottom"><button class="primary game-action" type="button" id="reveal" disabled>Reveal answer →</button><div class="feedback" id="feedback" aria-live="polite"></div><div class="round-nav"><button type="button" id="previousRound" disabled>← Previous</button><div class="dots" id="roundDots" aria-label="Round progress"></div><button type="button" id="gameHelp">How to play</button></div></div>
 </div>
-<div class="finish" id="finishScreen" hidden><h2 id="finishTitle" tabindex="-1">Showdown complete.</h2><div class="finish-score"><span id="finishScore">0</span><small id="finishMaximum"> / 4</small></div><p>Four questions complete.<br>Ready for a fresh set?</p><div class="takeaways"><div><strong>Fewer defects</strong>Higher yield.</div><div><strong>Larger dies</strong>Fewer fit. Fewer survive.</div><div><strong>Larger wafers</strong>More chips. Same yield.*</div></div><p class="finish-assumption">*At the same defect density and die area.</p><div class="finish-actions"><button class="primary" type="button" id="replay">Four new questions ↻</button><button class="quiet" type="button" id="backToLab">Explore the wafer</button></div><button class="finish-review" type="button" id="reviewRounds">Review the answers</button></div>
+<div class="finish" id="finishScreen" hidden><h2 id="finishTitle" tabindex="-1">Fab Face-Off complete.</h2><div class="finish-score"><span id="finishScore">0</span><small id="finishMaximum"> / 4</small></div><p>Four questions complete.<br>Ready for a fresh set?</p><div class="takeaways"><div><strong>Fewer defects</strong>Higher yield.</div><div><strong>Larger dies</strong>Fewer fit. Fewer survive.</div><div><strong>Larger wafers</strong>More chips. Same yield.*</div></div><p class="finish-assumption">*At the same defect density and die area.</p><div class="finish-actions"><button class="primary" type="button" id="replay">Four new questions ↻</button><button class="quiet" type="button" id="backToLab">Explore the wafer</button></div><button class="finish-review" type="button" id="reviewRounds">Review the answers</button></div>
 <div class="confetti" id="confetti" aria-hidden="true" hidden></div><div class="bulbs" aria-hidden="true"></div>
 </div>
 </section>
@@ -354,7 +353,7 @@ html{scroll-behavior:smooth}.primary{background:#7650ad;box-shadow:0 4px 0 #5636
  <div class="intro-actions"><button type="button" id="introNext" class="primary" autofocus>Open the cleanroom →</button></div>
 </dialog>
 <dialog id="showdownResults" aria-labelledby="finaleTitle" aria-describedby="finaleCopy">
-<div class="result-panel"><h2 class="result-title" id="finaleTitle" tabindex="-1">Showdown complete.</h2><div class="result-hero"><div class="final-score"><span id="finaleScore">0</span><small> / 4</small><span class="final-score-label">CLASS SCORE</span></div><div class="crew-stage" role="img" aria-label="The two cleanroom engineers react to your final score"><div class="crew-floor"></div><div class="crew-position"><div class="crew"><div class="manual"></div><div class="tech"><div class="tech-hood"><div class="tech-window"></div><div class="tech-mask"></div></div><div class="tech-body"><i class="tech-pocket"></i></div><div class="tech-arm"></div><div class="tech-arm inner"><i class="tech-glove"></i></div><div class="tech-boot"></div><div class="tech-boot right"></div></div><div class="tech second"><div class="tech-hood"><div class="tech-window"></div><div class="tech-mask"></div></div><div class="tech-body"><i class="tech-pocket"></i></div><div class="tech-arm"></div><div class="tech-arm inner"><i class="tech-glove"></i></div><div class="tech-boot"></div><div class="tech-boot right"></div></div></div></div></div></div><p class="result-copy" id="finaleCopy">A perfect inspection.</p><div class="last-lesson"><strong id="finaleVerdict"></strong><br><span id="finaleLesson"></span></div><div class="takeaways"><div class="takeaway"><strong>Fewer defects</strong>Higher yield.</div><div class="takeaway"><strong>Larger dies</strong>Fewer fit.<br>Fewer survive.</div><div class="takeaway"><strong>Larger wafers</strong>More chips.<br>Same yield.*</div></div><p class="assumption">*At the same defect density and die area.</p></div>
+<div class="result-panel"><h2 class="result-title" id="finaleTitle" tabindex="-1">Fab Face-Off complete.</h2><div class="result-hero"><div class="final-score"><span id="finaleScore">0</span><small> / 4</small><span class="final-score-label">CLASS SCORE</span></div><div class="crew-stage" role="img" aria-label="The two cleanroom engineers react to your final score"><div class="crew-floor"></div><div class="crew-position"><div class="crew"><div class="manual"></div><div class="tech"><div class="tech-hood"><div class="tech-window"></div><div class="tech-mask"></div></div><div class="tech-body"><i class="tech-pocket"></i></div><div class="tech-arm"></div><div class="tech-arm inner"><i class="tech-glove"></i></div><div class="tech-boot"></div><div class="tech-boot right"></div></div><div class="tech second"><div class="tech-hood"><div class="tech-window"></div><div class="tech-mask"></div></div><div class="tech-body"><i class="tech-pocket"></i></div><div class="tech-arm"></div><div class="tech-arm inner"><i class="tech-glove"></i></div><div class="tech-boot"></div><div class="tech-boot right"></div></div></div></div></div></div><p class="result-copy" id="finaleCopy">A perfect inspection.</p><div class="last-lesson"><strong id="finaleVerdict"></strong><br><span id="finaleLesson"></span></div><div class="takeaways"><div class="takeaway"><strong>Fewer defects</strong>Higher yield.</div><div class="takeaway"><strong>Larger dies</strong>Fewer fit.<br>Fewer survive.</div><div class="takeaway"><strong>Larger wafers</strong>More chips.<br>Same yield.*</div></div><p class="assumption">*At the same defect density and die area.</p></div>
 </dialog>
 <dialog id="feedbackDialog" aria-labelledby="feedbackQuote" aria-describedby="feedbackStatus feedbackVerdict feedbackLesson">
  <div class="mm-popup crew-popup mm-play" id="feedbackCard" data-state="right">
@@ -516,7 +515,7 @@ function queueFinale(){
 $('replayFraction').addEventListener('click',animateYieldFraction);
 $('showdownResults').addEventListener('close',()=>{
  clearTimeout(finaleDismissTimer);finaleDismissTimer=0;finaleCountTimers.forEach(clearTimeout);finaleCountTimers=[];stopFinaleSound();
- if(mode==='game'&&finished){$('finishTitle').focus({preventScroll:true});$('liveStatus').textContent=`Showdown complete. ${classScore()} out of ${maxScore}. Your score and the lesson summary remain on the page.`;}
+ if(mode==='game'&&finished){$('finishTitle').focus({preventScroll:true});$('liveStatus').textContent=`Fab Face-Off complete. ${classScore()} out of ${maxScore}. Your score and the lesson summary remain on the page.`;}
 });
 
 const SOUND_GAIN = 2.5;
@@ -1115,7 +1114,7 @@ function clearParty(){clearTimeout(partyTimer);$('confetti').hidden=true;$('stud
 function party(){clearParty();if(reduced.matches)return;$('studio').classList.add('celebrating');$('confetti').replaceChildren();for(let i=0;i<24;i++){const item=document.createElement('i');item.style.setProperty('--x',(i*4.15)+'%');item.style.setProperty('--c',['#a992c5','#dda8ac','#a9bf8e','#e3c272'][i%4]);item.style.setProperty('--delay',(i%5*.04)+'s');$('confetti').append(item);}$('confetti').hidden=false;partyTimer=setTimeout(clearParty,1300);}
 function renderGame(focus=false){
  closeFeedback();clearParty();saveGame();$('roundScreen').hidden=finished;$('finishScreen').hidden=!finished;$('classScore').textContent=classScore();
- if(finished){$('finishScore').textContent=classScore();$('finishTitle').textContent='Showdown complete.';$('studio').classList.remove('concept-question');return;}
+ if(finished){$('finishScore').textContent=classScore();$('finishTitle').textContent='Fab Face-Off complete.';$('studio').classList.remove('concept-question');return;}
  const r=rounds[roundIndex],rec=records[roundIndex],concept=r.kind==='concept';
  $('studio').classList.toggle('concept-question',concept);$('questionArena').hidden=concept;
  $('roundBadge').textContent=`QUESTION ${roundIndex+1} / 4 · ${r.category}`;$('questionText').textContent=r.title;$('questionHint').textContent=r.hint;
@@ -1162,8 +1161,8 @@ function syncActivityScene(){
  const inGame=mode==='game';
  $('cleanroomBackdrop').hidden=inGame;$('controlRoomBackdrop').hidden=!inGame;
  $('home').hidden=inGame;$('introAgain').hidden=inGame;
- $('footerIdentity').textContent=inGame?'Silicon Showdown · Wafer yield':'The Cleanroom · Wafer yield';
- document.title=inGame?'Silicon Showdown · Wafer Yield':'The Cleanroom · Wafer Yield';
+ $('footerIdentity').textContent=inGame?'Fab Face-Off · Wafer yield':'The Cleanroom · Wafer yield';
+ document.title=inGame?'Fab Face-Off · Wafer Yield':'The Cleanroom · Wafer Yield';
 }
 function setMode(next){hideMissionCelebration();cancelFinale();closeFeedback();cancelScan();mode=next;syncActivityScene();$('explore').hidden=mode!=='explore';$('game').hidden=mode!=='game';$('exploreTab').setAttribute('aria-pressed',String(mode==='explore'));$('gameTab').setAttribute('aria-pressed',String(mode==='game'));if(mode==='explore'){updateMetrics();requestAnimationFrame(resize);}else renderGame();}
 $('exploreTab').addEventListener('click',()=>setMode('explore'));$('gameTab').addEventListener('click',()=>setMode('game'));$('openShowdown').addEventListener('click',()=>{setMode('game');window.scrollTo({top:0,behavior:reduced.matches?'instant':'smooth'});});$('backToLab').addEventListener('click',()=>{setMode('explore');window.scrollTo({top:0,behavior:reduced.matches?'instant':'smooth'});});$('home').addEventListener('click',e=>{e.preventDefault();setMode('explore');window.scrollTo({top:0,behavior:reduced.matches?'instant':'smooth'});});
